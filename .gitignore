@@ -1,0 +1,11 @@
+qrag/
+__pycache__/
+*.pyc
+*.pyo
+dist/
+build/
+*.egg-info/
+.pytest_cache/
+results/
+*.dat
+.DS_Store

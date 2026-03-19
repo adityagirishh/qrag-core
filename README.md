@@ -15,7 +15,7 @@ Memory-efficient retrieval-augmented generation (RAG) with **4-bit residual quan
 ## Installation
 
 ```bash
-git clone https://github.com/yourusername/qrag-core.git
+git clone https://github.com/adityagirishh/qrag-core.git
 cd qrag-core
 python -m venv venv && source venv/bin/activate
 pip install -e ".[dev]"

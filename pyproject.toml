@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qrag-core"
+version = "0.1.0"
+description = "Memory-efficient RAG with 4-bit residuals and 8-bit E1 quantization"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["rag", "embeddings", "quantization", "vector-search", "memory-efficient"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    "numpy>=1.24",
+    "scikit-learn>=1.3",
+]
+
+[project.optional-dependencies]
+faiss-cpu = ["faiss-cpu>=1.7"]
+faiss-gpu = ["faiss-gpu>=1.7"]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov",
+    "build",
+    "twine",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/qrag-core"
+Issues = "https://github.com/yourusername/qrag-core/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["qrag_core*"]
